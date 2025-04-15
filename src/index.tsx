@@ -11,3 +11,4 @@ export const myFunction = () => {
 }
 
 export { default as DomainTextInput } from './components/TextInput/TextInput';
+export { default as DomainSelect } from './components/Select/Select'
