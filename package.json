@@ -1,6 +1,6 @@
 {
   "name": "react-native-domain-ui",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "Domain Company UI Component Libraries",
   "source": "./src/index.tsx",
   "main": "./lib/module/index.js",
