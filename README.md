@@ -542,6 +542,7 @@ The `DomainHeader` component is a customizable header component for React Native
 | `rightComponent` | `React.ReactNode`    | ❌ No       | Optional component displayed on the right side. |
 | `backgroundColor` | `ColorValue`        | ❌ No       | Background color of the header. |
 | `color`         | `ColorValue`         | ❌ No       | Text and icon color. |
+| `backButton`    | `boolean`            | ❌ No        | Function to show back navigation. |
 
 ## Example Usage
 
