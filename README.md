@@ -635,6 +635,8 @@ export default DomainAlertExample;
 ## Description
 `DomainMultipleSelect` is a multi-select drop-down component from react-native-domain-ui, suitable for React Native applications. It allows users to select multiple values ​​from a set of options, supports custom option display, search, maximum/minimum selection limits and other functions.
 
+![image](https://github.com/user-attachments/assets/0d072f27-927b-49b7-88ca-53976656037a)
+
 ### Example Usage
 ```tsx
 import { View, Text } from 'react-native';
