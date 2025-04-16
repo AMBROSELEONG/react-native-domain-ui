@@ -1,13 +1,13 @@
 # Installation
 
 ```sh
-npm install domaincomponent
+npm install react-native-domain-ui
 ```
 
 or 
 
 ```sh
-yarn add domaincomponent
+yarn add react-native-domain-ui
 ```
 
 # Usage
@@ -629,6 +629,96 @@ export default DomainAlertExample;
 - The `showAlert` function can be called anywhere in the app to display an alert.
 
 --- 
+
+# DomainMultipleSelect
+
+## Description
+`DomainMultipleSelect` is a multi-select drop-down component from react-native-domain-ui, suitable for React Native applications. It allows users to select multiple values ​​from a set of options, supports custom option display, search, maximum/minimum selection limits and other functions.
+
+### Example Usage
+```tsx
+import { View, Text } from 'react-native';
+import {
+    DomainMainContainer,
+    DomainMultipleSelect,
+} from 'react-native-domain-ui';
+import { useState } from 'react';
+
+const DomainMultipleSelectExample = () => {
+    const [selectedValue, setSelectedValue] = useState<string[]>([]);
+
+    const options = [
+        { id: '1', name: 'One', left: <Text>one</Text>,  right: <Text>one</Text> },
+        { id: '2', name: 'Two' },
+        { id: '3', name: 'Three' },
+        { id: '4', name: 'Four' },
+        { id: '5', name: 'Five' },
+        { id: '6', name: 'One' },
+        { id: '7', name: 'Two' },
+        { id: '8', name: 'Three' },
+        { id: '9', name: 'Four' },
+        { id: '10', name: 'Five' },
+    ];
+
+    return (
+        <DomainMainContainer>
+            <View style={{ alignItems: 'center' }}>
+                <View style={{ width: '80%', }}>
+                    <View style={{ marginVertical: 10 }}>
+
+                        <DomainMultipleSelect
+                            options={options}
+                            value={selectedValue}
+                            onChange={(newValue) => setSelectedValue(newValue ?? [])}
+                            label="Test"
+                            resetButton={true}
+                            labelBackground='#f0f0f0'
+                            placeholder="Select"
+                            selectedColor={'#f0f0f0'}
+                        />
+
+                        <Text>{selectedValue}</Text>
+                    </View>
+                </View>
+            </View>
+        </DomainMainContainer>
+    )
+}
+
+export default DomainMultipleSelectExample;
+```
+
+## Props Table
+
+|Prop | Type | Required | Description |
+|------|------|---------|-------------|
+|style | StyleProp<ViewStyle> | ❌ No | Custom styling for the component container.|
+|search | boolean | ❌ No | Enables the search bar inside the dropdown.|
+|options | Option[] | ✅ Yes | Array of selectable options. Each option includes id, name, and optional left, right.|
+|value | string[] | ❌ No | Currently selected option IDs.|
+|onChange | (value: string[]) => void | ❌ No | Callback when selected values are changed.|
+|placeholder | string | ❌ No | Placeholder text shown when nothing is selected.|
+|label | string | ❌ No | Title/label displayed above the selector.|
+|labelColor | ColorValue | ❌ No | Color of the label text.|
+|labelBackground | ColorValue | ❌ No | Background color of the label area.|
+|resetButton | boolean | ❌ No | Whether to show a reset button to clear selections.|
+|helperText | string | ❌ No | Additional text shown below the field for guidance or error messages.|
+|helperTextColor | ColorValue | ❌ No | Color for the helper text.|
+|axSelection | number | ❌ No | Maximum number of items allowed to be selected.|
+|minSelection | number | ❌ No | Minimum number of items required to be selected.|
+|selectedColor | ColorValue | ❌ No | Background color for selected items.|
+
+### **Option Object Structure**
+Each option in the `options` array follows this structure:
+
+```ts
+export interface Option {
+    id: string;         // Unique identifier for the option
+    name: string;       // Display name of the option
+    left?: ReactNode;   // (Optional) Left-side icon/component
+    right?: ReactNode;  // (Optional) Right-side icon/component
+}
+```
 
 ## License
 

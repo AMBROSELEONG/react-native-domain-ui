@@ -1,4 +1,4 @@
-import { DomainCheckbox } from "domaincomponent";
+import { DomainCheckbox } from "react-native-domain-ui";
 import { View, Text } from 'react-native';
 import { useState } from "react"
 

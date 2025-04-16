@@ -25,6 +25,7 @@ const DomainMultipleSelect: React.FC<DomainMultipleSelectProps> = ({
     helperTextColor = "red",
     maxSelection,
     minSelection = 1,
+    selectedColor = "#F5F5F5",
 }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
@@ -118,8 +119,9 @@ const DomainMultipleSelect: React.FC<DomainMultipleSelectProps> = ({
                             keyExtractor={(item) => item.id}
                             renderItem={({ item }) => (
                                 <TouchableOpacity
-                                    style={MultipleSelectCSS.option}
+                                    style={[MultipleSelectCSS.option, value.includes(item.id) && { backgroundColor: selectedColor },]}
                                     onPress={() => toggleSelect(item.id)}
+
                                 >
                                     {item.left && (
                                         <View style={[MultipleSelectCSS.sideContainer, { marginRight: 20 }]}>

@@ -1,4 +1,4 @@
-import { showAlert, DomainMainContainer, DomainAlert } from "domaincomponent"
+import { showAlert, DomainMainContainer, DomainAlert } from "react-native-domain-ui"
 import { Button, StatusBar } from "react-native";
 
 const DomainAlertExample = () => {

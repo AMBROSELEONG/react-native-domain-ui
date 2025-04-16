@@ -12,7 +12,7 @@ import DomainHelperText from './DomainHelperText';
 import DomainDropdownMenu from './DomainDropdownMenu';
 import DomainHeader from './DomainHeader';
 import DomainAlertExample from './DomainAlert';
-// import DomainMultipleSelect from './DomainMultipleSelect';
+import DomainMultipleSelect from './DomainMultipleSelect';
 
 const Stack = createStackNavigator();
 
@@ -32,7 +32,7 @@ const App = () => {
         <Stack.Screen name="DomainDropdownMenu" component={DomainDropdownMenu} options={{ title: 'DomainDropdownMenu' }} />
         <Stack.Screen name="DomainHeader" component={DomainHeader} options={{ headerShown: false }} />
         <Stack.Screen name="DomainAlert" component={DomainAlertExample} options={{ title: 'DomainHeader' }} />
-        {/* <Stack.Screen name="DomainMultipleSelect" component={DomainMultipleSelect} options={{ title: 'DomainMultipleSelect' }} /> */}
+        <Stack.Screen name="DomainMultipleSelect" component={DomainMultipleSelect} options={{ title: 'DomainMultipleSelect' }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

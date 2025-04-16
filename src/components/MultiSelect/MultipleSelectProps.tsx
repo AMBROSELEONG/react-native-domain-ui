@@ -23,4 +23,5 @@ export interface DomainMultipleSelectProps {
   helperTextColor?: ColorValue;
   maxSelection?: number; 
   minSelection?: number;
+  selectedColor?: ColorValue;
 }

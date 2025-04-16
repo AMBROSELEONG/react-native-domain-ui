@@ -153,7 +153,6 @@ export const SelectCSS = StyleSheet.create({
 export const MainContainer = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 20,
   },
 });
 
@@ -353,6 +352,7 @@ export const MultipleSelectCSS = StyleSheet.create({
     borderColor: '#000',
     borderRadius: 8,
     height: 50,
+    flexDirection: 'row',
   },
   labelView: {
     marginLeft: 10,
@@ -380,15 +380,13 @@ export const MultipleSelectCSS = StyleSheet.create({
     alignSelf: 'center',
   },
   resetButton: {
-    marginRight: 10,
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    backgroundColor: '#ff4d4d',
-    borderRadius: 5,
+    padding: 10,
+    justifyContent: 'center',
   },
   resetButtonText: {
-    color: '#fff',
+    color: '#000',
     fontWeight: 'bold',
+    textAlign: 'center'
   },
   modalContainer: {
     flex: 1,
