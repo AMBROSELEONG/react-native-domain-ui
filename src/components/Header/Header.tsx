@@ -10,14 +10,17 @@ const DomainHeader: React.FC<DomainHeaderProps> = ({
     rightComponent,
     backgroundColor = '#000',
     color = '#fff',
+    backButton = true,
 }) => {
     return (
         <SafeAreaView style={{ backgroundColor }}>
             <StatusBar barStyle="light-content" backgroundColor={backgroundColor} />
             <View style={HeaderCSS.mainContainer}>
-                <TouchableOpacity style={HeaderCSS.headerIcon} onPress={navigation}>
-                    <Ionicons name="arrow-back" size={26} color={color} />
-                </TouchableOpacity>
+                {backButton ? (
+                    <TouchableOpacity style={HeaderCSS.headerIcon} onPress={navigation}>
+                        <Ionicons name="arrow-back" size={26} color={color} />
+                    </TouchableOpacity>
+                ) : (<View style={HeaderCSS.headerIcon}></View>)}
                 <Text style={[HeaderCSS.pageName, { color }]}>{title}</Text>
                 <View style={HeaderCSS.headerIcon}>
                     {rightComponent ? rightComponent : null}

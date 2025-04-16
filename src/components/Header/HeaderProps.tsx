@@ -6,4 +6,5 @@ export interface DomainHeaderProps {
     rightComponent?: React.ReactNode;
     backgroundColor?: ColorValue;
     color?: ColorValue;
+    backButton?: boolean;
 };
