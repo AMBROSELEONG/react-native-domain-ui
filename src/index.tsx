@@ -24,3 +24,4 @@ export { default as DomainDropdownMenu } from './components/DropdownMenu/Dropdow
 export { default as DomainHeader } from './components/Header/Header'
 export { default as DomainAlert, showAlert } from './components/Alert/Alert';
 export { default as DomainMultipleSelect } from './components/MultiSelect/MultipleSelect'
+export { default as DomainButton } from './components/Button/Button'

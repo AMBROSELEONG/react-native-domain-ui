@@ -451,3 +451,23 @@ export const MultipleSelectCSS = StyleSheet.create({
     fontSize: 14,
   },
 });
+
+export const ButtonCSS = StyleSheet.create({
+  container: {
+    width: '100%',
+    borderRadius: 5,
+    paddingVertical: 15,
+    backgroundColor: '#FF0000',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  text: {
+    color: '#fff',
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold'
+  }
+})

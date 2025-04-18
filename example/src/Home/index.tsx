@@ -9,7 +9,7 @@ const Home = () => {
             <View>
                 <TouchableOpacity style={style.button} onPress={() => navigation.navigate('DomainTextInput' as never)}>
                     <Text style={style.text}>Domain TextInput</Text>
-                </TouchableOpacity> 
+                </TouchableOpacity>
                 <TouchableOpacity style={style.button} onPress={() => navigation.navigate('DomainSelect' as never)}>
                     <Text style={style.text}>Domain Select</Text>
                 </TouchableOpacity>
@@ -42,6 +42,9 @@ const Home = () => {
                 </TouchableOpacity>
                 <TouchableOpacity style={style.button} onPress={() => navigation.navigate('DomainMultipleSelect' as never)}>
                     <Text style={style.text}>Domain Multiple Select</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={style.button} onPress={() => navigation.navigate('DomainButton' as never)}>
+                    <Text style={style.text}>Domain Button</Text>
                 </TouchableOpacity>
             </View>
         </DomainMainContainer>
