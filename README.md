@@ -723,6 +723,33 @@ export interface Option {
 }
 ```
 
+# DomainButton
+## Description
+`Domain Button` is a simple button that runs a custom style.
+
+### Example Usage
+```tsx
+import { DomainButton, DomainMainContainer } from "react-native-domain-ui"
+
+const DomainButtonExample = () => {
+    return (
+        <DomainMainContainer>
+            <DomainButton label="Test" onPress={() => {console.log('test')}} style={{backgroundColor: '#ff1234', width: '80%', alignSelf: 'center', marginTop: 20}} labelStyle={{color: '#fff'}}/>
+        </DomainMainContainer>
+    )
+}
+
+export default DomainButtonExample;
+```
+
+## Props Table
+|Prop | Type | Required | Description |
+|------|------|---------|-------------|
+|style | StyleProp<ViewStyle> | ❌ No | Custom styling for the component container.|
+|onPress | () => void | ✅ Yes | Click function |
+|label | string | ✅ Yes | Label for the button |
+|labelStyle | StyleProp<ViewStyle> | ❌ No | Custom styling for the label |
+
 ## License
 
 MIT
