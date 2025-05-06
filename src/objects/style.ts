@@ -471,3 +471,17 @@ export const ButtonCSS = StyleSheet.create({
     fontWeight: 'bold'
   }
 })
+
+export const FlashingCSS = StyleSheet.create({
+  warningBox: {
+    backgroundColor: '#ff4d4f',
+    padding: 12,
+    borderRadius: 8,
+    margin: 10,
+  },
+  warningText: {
+    color: 'white',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+})
